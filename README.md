@@ -6,7 +6,7 @@ This is possible by defining mathematical transformations for computing these pr
 
 Once you represent data as a polynomial or other more advanced algebraic construct (like a function of a complex variable) in this way you can analyze it using algebraic methods and operations.
 
-Note: The algebraic representation is technically "learned" from the data by first estimating a discrete probaility distribution and there are no restrictions on how this part of the workflow is chosen. After this initial learning phase, transformations used are deterministic and strictly algebraic in nature.
+Note: The algebraic representation is technically "learned" from the data by first estimating a discrete probaility distribution and there are no restrictions on how this part of the workflow is chosen. After this initial learning phase, transformations used are deterministic and strictly algebraic in nature, existing in a vector space.
 
 ## Why use algebra for data analysis?
 
@@ -26,7 +26,9 @@ A typical workflow would be to first choose a representation of your data for ex
 
 You can use the library to estimate a discrete probaility distribution also as an array.
 
-This array can be fed into mathematical transformations to represent the data as algebraic objects. The two main representations currently are polynomials and characteristic functions.
+An array is chosen so additional tensor operations (symbolically you can represent these as einsums) can be performed at any point in thr analysis.
+
+The final array can be fed into mathematical transformations between vector spaces to represent the data as algebraic objects. The two main representations currently are polynomials and characteristic functions. The later is computed using Fourier transforms.
 
 ## Usage
 
