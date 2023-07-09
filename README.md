@@ -35,8 +35,7 @@ p_b_given_a = Poly(3*x + 4, x)
 p_a_given_b = bayes_rule(p_a, p_b, p_b_given_a)
 print("P(A | B):", p_a_given_b)
 
-
 ## Philosophy of Algebraic Data Analysis
 
-As you can see Baye's rule can be represented using Polynomial divison. Multiplying polynomials corresponds to convolution of probability disttributions. We can also represent probability distributions uniquely using Fourier transform. you can perform powerful data analysis using basic algebraic operations corresponding to convolutions. 
+There are various ways to represent discrete probability distributions as polynomials. Multiplying polynomials corresponds to convolution of probability disttributions. We can also represent probability distributions uniquely using Fourier transform. you can perform powerful data analysis using basic algebraic operations corresponding to convolutions. 
 
