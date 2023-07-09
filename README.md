@@ -12,6 +12,14 @@ The code provides basic functions for performing algebraic data analysis. It dem
 
 Foundations are based on paper [Papers with code](https://paperswithcode.com/paper/algebraic-data-analysis)
 
+## Data Analysis Workflow
+
+A typical workflow would be to first choose a representation of your data for example an array.
+
+You can use the library to estimate a discrete probaility distribution also as an array.
+
+This array can be fed into mathematical transformations to represent the data as algebraic objects. The two main representations currently are polynomials and characteristic functions.
+
 ## Usage
 
 To use the code for computing the characteristic function of a custom data distribution represented as a NumPy nd-array, follow these steps:
