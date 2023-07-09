@@ -48,6 +48,7 @@ p, q = [proba(x, char, 2) for x in range(2)]
 
 print(f"The probability of event 0 is {round(p, 2)}")
 print(f"The probability of event 1 is {round(q, 2)}")
+```
 
 ## Explanation 
 
