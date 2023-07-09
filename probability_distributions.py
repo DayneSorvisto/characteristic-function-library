@@ -29,11 +29,11 @@ if __name__ == "__main__":
     variety = compute_algebraic_variety(polynomial, z)
     print("Algebraic Variety:", variety)
 
-    # algebraic version of bayes rule using Polynomial divison 
+    # algebraic version of bayes rule 
     x = symbols('x')
-    p_a = Poly(x**2 + 2*x + 1, x)
-    p_b = Poly(2*x + 3, x)
-    p_b_given_a = Poly(3*x + 4, x)
-
-    p_a_given_b = bayes_rule(p_a, p_b, p_b_given_a)
+    p_a = 0.7  # Probability of event A (float)
+    p_b_given_a = Poly(3*x + 4, x)  # Polynomial representing P(B | A)
+    # get coefficients as list of p_b_given_a
+    p_b = 0.5  # Probability of event B (float)
+    p_a_given_b = bayes_rule(p_a, p_b_given_a, p_b)
     print("P(A | B):", p_a_given_b)
