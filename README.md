@@ -76,7 +76,7 @@ Algebraic data analysis provides various methods for representing and analyzing 
 
 Contribute to the project by creaitng a PR. Improve the accuracy of library or add new functions based on current papers in algebraic data analysis. All implementations should have practical use and be able to work on real world data with appropriate documentation. 
 
-Area of that need work:
+Area that need work (first time contributions are welcome):
 
 - Real world or interesting examples with actual data sets
 - Links to other papers and work on algebraic data analysis
