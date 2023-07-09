@@ -1,6 +1,10 @@
 # Algebraic Data Analysis Library
 
-This repository provides experimental Python code for symbolically working with real data using polynomials and other algebraic constructs. Representing real-world data as polynomials has some interesting applications. Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are alreqdy widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
+This repository provides experimental Python code for symbolically working with real data using polynomials and other algebraic constructs. it provides primitive transformations for computing these representations such as Fourier transforms.
+
+## Why use algebra for data analysis?
+
+Representing real-world data as polynomials has some interesting applications. Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are alreqdy widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
 
 The code provides basic functions for performing algebraic data analysis. It demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform. Additionally, it includes functions for representing discrete distributions as polynomials, working with discrete probability distributions using basic algebra.
 
