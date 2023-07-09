@@ -88,12 +88,14 @@ Algebraic data analysis provides various methods for representing and analyzing 
 
 ## Contributions
 
-Contribute to the project by creaitng a PR. Improve the accuracy of library or add new functions based on current papers in algebraic data analysis. All implementations should have practical use and be able to work on real world data with appropriate documentation. 
+Contribute to the project by creaitng a PR. The library is currently very basic and not easy to use. 
+
+Improve the accuracy or ease of use of the library or add new functions based on current papers in algebraic data analysis. All implementations should have practical use and be able to work on real world data with appropriate documentation. 
 
 Area that need work (first time contributions are welcome):
 
 - Real world or interesting examples with actual data sets
-- Links to other papers and work on algebraic data analysis
+- Links to other papers and work on algebraic data analysis (please add these to README)
 - Algebraic implemention of Bayes Rule (see probaility distributions module)
 - Creating PyPi package that can be used for algebraic data analysis in production environment
 - Einsums for representing tensor operations 
