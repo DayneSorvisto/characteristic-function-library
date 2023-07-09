@@ -81,7 +81,9 @@ Area of that need work:
 - Real world or interesting examples with actual data sets
 - Links to other papers and work on algebraic data analysis
 - Algebraic implemention of Bayes Rule (see probaility distributions module)
+- Creating PyPi package that can be used for algebraic data analysis in production environment
 - Einsums for representing tensor operations 
 - Connections to topological data analysis
 - Support for algebraic geometry, commutative algebra, and combinatorics
+
 
