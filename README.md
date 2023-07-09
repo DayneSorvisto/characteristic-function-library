@@ -75,3 +75,9 @@ Algebraic data analysis provides various methods for representing and analyzing 
 ## Contributions
 
 Contribute to the project by creaitng a PR. Improve the accuracy of library or add new functions based on current papers in algebraic data analysis. 
+
+Area of that need work:
+
+- Einsums for representing tensor operations or support for vector spaces.
+- Connections to topological data analysis
+- Support for algebraic geometry, commutative algebra, and combinatorics
