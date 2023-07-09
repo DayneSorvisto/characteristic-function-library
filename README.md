@@ -69,3 +69,7 @@ The estimated probabilities are printed or further analyzed as needed.
 ## Philosophy of Algebraic Data Analysis
 
 Algebraic data analysis provides various methods for representing and analyzing discrete probability distributions using polynomials. For example multiplying polynomials corresponds to convolution of probability distributions. The characteristic function is another more complex algebraic structure using the discrete-time Fourier transform that allows data analysis using complex numbers. By leveraging basic algebraic operations corresponding to convolutions, fourier transforms and smoothing operations you can perform powerful, elegant data analysis and inference tasks on discrete probability distributions.
+
+## Contributions
+
+Contribute to the project by creaitng a PR. Improve the accuracy of library or add new functions based on current papers in algebraic data analysis. 
