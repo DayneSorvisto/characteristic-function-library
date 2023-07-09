@@ -10,7 +10,9 @@ Note: The algebraic representation is technically "learned" from the data by fir
 
 ## Why use algebra for data analysis?
 
-Representing real-world data on a computer using algebraic objects like polynomials has some interesting applications including a more elegant and rigorous way to analyze data. The ultimate goal is to represent all data analysis operations (the entire data analysis workflow) symbolically as algebraic operations that exist inside of some more abstract algebraic structure like a vector space or commutative ring. 
+Representing real-world data on a computer using algebraic objects like polynomials has some interesting applications including a more elegant and rigorous way to analyze data. 
+
+The ultimate goal is to represent all data analysis operations symbolically as algebraic operations that exist inside of some more abstract algebraic structure like a vector space or commutative ring where regular math can be applied. 
 
 ## Basic Theory
 
