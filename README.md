@@ -78,6 +78,7 @@ Contribute to the project by creaitng a PR. Improve the accuracy of library or a
 
 Area of that need work:
 
-- Einsums for representing tensor operations or support for vector spaces.
+- Einsums for representing tensor operations 
 - Connections to topological data analysis
 - Support for algebraic geometry, commutative algebra, and combinatorics
+
