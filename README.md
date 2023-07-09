@@ -4,6 +4,8 @@ This repository provides Python code for working with probability distributions 
 
 The code provides basic functions for performing algebraic data analysis. The cod demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution. Additionally, it includes functions for representing discrete distributions as polynomials, working with probabilities using basic algebra, and computing characteristic functions using the discrete-time Fourier transform.
 
+Based on paper [Papers with code](https://paperswithcode.com/paper/algebraic-data-analysis)
+
 ## Usage
 
 To use the code for computing the characteristic function of a custom data distribution represented as a NumPy nd-array, follow these steps:
