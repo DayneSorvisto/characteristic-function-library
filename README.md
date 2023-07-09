@@ -22,13 +22,11 @@ Foundations are based on paper [Papers with code](https://paperswithcode.com/pap
 
 ## Data Analysis Workflow
 
-A typical workflow would be to first choose a representation of your data for example an array.
+A typical workflow would be to first choose a representation of your data for example an array (that exists inside a abstract vector space).
 
-You can use the library to estimate a discrete probaility distribution also as an array.
+The initial phase of the workflow is to first learn discrete probaility distribution that represents the data, represented as an array on a computer. An array is chosen so additional tensor operations (symbolically you can write these symbolically using einsums and can be additionally learned) can be performed at any point in thr analysis.
 
-An array is chosen so additional tensor operations (symbolically you can represent these as einsums) can be performed at any point in thr analysis.
-
-The final array can be fed into mathematical transformations between vector spaces to represent the data as algebraic objects. The two main representations currently are polynomials and characteristic functions. The later is computed using Fourier transforms.
+The final array can be fed into mathematical transformations between vector spaces to represent the data as algebraic objects like polynomials or functions of a complex variable. The two main representations currently are polynomials and characteristic functions (a function of a single complex variable). The later is computed using Fourier transforms, specifically the discrete-time Fourier transform with special treatment for probability distributions.
 
 ## Usage
 
