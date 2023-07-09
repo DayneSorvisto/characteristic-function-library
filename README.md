@@ -6,7 +6,7 @@ This is possible by defining mathematical transformations for computing these pr
 
 Once you represent data as a polynomial or other more advanced algebraic construct (like a function of a complex variable) in this way you can analyze it using algebraic methods and operations.
 
-Note: The algebraic representation is techmically "learned" from the data by estimating a probaility distribution and there are no restrictions on how this part of the workflow is chosen. After this initial learning phase, transformations used are deterministic and strictly algebraic in nature.
+Note: The algebraic representation is technically "learned" from the data by first estimating a discrete probaility distribution and there are no restrictions on how this part of the workflow is chosen. After this initial learning phase, transformations used are deterministic and strictly algebraic in nature.
 
 ## Why use algebra for data analysis?
 
