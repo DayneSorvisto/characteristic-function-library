@@ -49,6 +49,8 @@ p, q = [proba(x, char, 2) for x in range(2)]
 print(f"The probability of event 0 is {round(p, 2)}")
 print(f"The probability of event 1 is {round(q, 2)}")
 
+## Explanation 
+
 In this example, we first set the random seed for reproducibility and define the standard deviation (sigma), mean (mu), and training data size (N).
 
 Next, we generate a training dataset X_train using any method suitable for your custom data (for example Kernel Density Estimation or a neural network). This could include data generation using random processes, real-world data, or any other appropriate technique.
@@ -61,6 +63,6 @@ The proba function is used to estimate the probabilities of specific events. You
 
 The estimated probabilities are printed or further analyzed as needed.
 
-Philosophy of Algebraic Data Analysis
+## Philosophy of Algebraic Data Analysis
 
 Algebraic data analysis provides various methods for representing and analyzing discrete probability distributions using polynomials. Multiplying polynomials corresponds to convolution of probability distributions, and the characteristic function allows representation using the discrete-time Fourier transform. By leveraging basic algebraic operations corresponding to convolutions, you can perform powerful data analysis and inference tasks on discrete probability distributions.
