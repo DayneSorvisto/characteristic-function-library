@@ -1,6 +1,8 @@
 # Algebraic Data Analysis Library
 
-This repository provides experimental Python code for symbolically working with real data using polynomials and other algebraic constructs. it provides primitive transformations for computing these representations such as Fourier transforms.
+This repository provides experimental Python code for symbolically working with real data using polynomials and other algebraic constructs. it provides mathematical transformations for computing these primitive representations such as Fourier transforms. 
+
+Once you represent data in this way you can analyze it using algebraic methods and operations.
 
 ## Why use algebra for data analysis?
 
