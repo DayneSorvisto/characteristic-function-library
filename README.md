@@ -79,6 +79,7 @@ Contribute to the project by creaitng a PR. Improve the accuracy of library or a
 Area of that need work:
 
 - Real world or interesting examples with actual data sets
+- Links to other papers and work on algebraic data analysis
 - Einsums for representing tensor operations 
 - Connections to topological data analysis
 - Support for algebraic geometry, commutative algebra, and combinatorics
