@@ -6,11 +6,25 @@ import numpy as np
 from sympy import symbols, Eq, solve
 from sympy import Poly
 
-def bayes_rule(p_a, p_b, p_b_given_a):
-    x = symbols('x')
-    p_a_given_b = Poly((p_b_given_a * p_a) / p_b, x)
-    return p_a_given_b
+def normalize_polynomial(polynomial):
+    """
+    normalizes a polynomial so that the sum of the coefficients is 1.
+    """
+    polynomial = Poly(polynomial)
+    coeffs = polynomial.all_coeffs()
+    coeff_sum = sum(coeffs)
+    normalized_coeffs = [coeff / coeff_sum for coeff in coeffs]
+    normalized_polynomial = Poly(normalized_coeffs, polynomial.gen)
+    return normalized_polynomial
 
+def bayes_rule(p_a, p_b_given_a, p_b):
+    """
+    Computes the conditional probability of event A given event B using Bayes rule.
+    """
+    p_a_given_b = p_b_given_a * p_a / p_b
+    p_a_given_b_normalized = normalize_polynomial(p_a_given_b)
+    return p_a_given_b_normalized
+    
 def compute_algebraic_variety(polynomial, z):
     """
     computes the algebraic variety of a polynomial
