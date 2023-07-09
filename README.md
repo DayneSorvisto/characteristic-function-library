@@ -6,7 +6,7 @@ Once you represent data in this way you can analyze it using algebraic methods a
 
 ## Why use algebra for data analysis?
 
-Representing real-world data as polynomials has some interesting applications. Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are alreqdy widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
+Representing real-world data on a computer using algebraic objects like polynomials has some interesting applications. Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are alreqdy widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
 
 The code provides basic functions for performing algebraic data analysis. It demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform. Additionally, it includes functions for representing discrete distributions as polynomials, working with discrete probability distributions using basic algebra.
 
