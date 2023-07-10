@@ -8,9 +8,11 @@ I've included a few extra functions for reversing the process (discrete characte
 
 # Contributing
 
+This code is experimental. 
+
 Despite the wide-spread use of Fourier transforms in signal processing and time series (especially seasonal data or data that is periodic in nature), applying the discrete-time Fourier transform to discrete probability distributions to do data analysis is a less well-known technique (the continuous version is widely applied in mathematicla statistics).
 
-If you use this code in a practical example of data analysis please create a PR and share the example (I'm interested in seeing different ways to interpret the characteristic function with real world data or any surprising applications).
+If you use this code in a practical example of data analysis please create a PR and share the example (I'm particularly interested in seeing different ways to interpret the discrete characteristic function with real world data or any surprising interpretations or applications to data science).
 
 ## Usage
 
