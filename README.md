@@ -9,7 +9,7 @@ This repository is a practical implementaton of ideas from an emerging field cal
 - "Algebraic Methods in Statistics and Probability" by Bernd Sturmfels. [PDF]
 - "Algebraic Statistics: A Computational Algebraic Geometry Approach" by Seth Sullivant. [PDF]
 
-It aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations. The library offers two key advantages:
+It aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations like polynomial multiplication (interpreted as convolution of probability distrubutions) and other mathematical transformations like Fourier transforms to create new algenbraic functions. The library offers two key advantages:
 
 1. Symbolic representation of data analysis: By representing data symbolically using algebraic objects, such as polynomials or functions of complex variables, data analysis becomes more expressive and interpretable.
 
