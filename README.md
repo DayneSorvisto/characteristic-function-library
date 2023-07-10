@@ -1,12 +1,16 @@
 # Algebraic Data Analysis Library
 
-This repository corresponds to a  paper on the discrete-time Fourier transform and its use and applications to data analysis. You can use this special flavor of Fourier transform to estimate the probability distribution of some finite det of data points and then compute a discrete version of the characteristic function. For a continuous distribution, this function has many interesting statistical and mathematical properties (it is used for example in the proof of the central limit theorem). 
+Can you do data analysis with complex numbers? It turns out, yes you can.
+
+This repository corresponds to a paper on the discrete-time Fourier transform ([papers with code](https://paperswithcode.com/search?q=author%3Adayne+sorvisto)] and its use and applications to data analysis. You can use this special flavor of Fourier transform to estimate the probability distribution of some finite det of data points and then compute a discrete version of the characteristic function. For a continuous distribution, this function has many interesting statistical and mathematical properties (it is used for example in the proof of the central limit theorem). 
 
 I've included a few extra functions for reversing the process (discrete characteristic function to discrete probability distribution) and some functions for representing discrete probability distributions as polynomials (multiplication in this case can be interpreted as convolution and can be used for smoothing). 
 
 # Contributing
 
-If you use this code in a practical example of data analysis please create a PR and share the example.
+Despite the wide-spread use of Fourier transforms in signal processing and time series (especially seasonal data or data that is periodic in nature), applying the Discrete-time Fourier transform to discrete probability distributions to do data analysis is a less well-known technique (the continuous version is widely applied in mathematicla statistics).
+
+If you use this code in a practical example of data analysis please create a PR and share the example (I'm interested in seeing different ways to interpret the characteristic function with real world data or any surprising applications).
 
 ## Usage
 
