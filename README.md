@@ -2,7 +2,7 @@
 
 Can you do data analysis with complex numbers? Surprisingly, it turns out, yes you can and Python supports complex numbers natively which makes it easier. You can even represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
 
-This repository corresponds to a paper on the discrete-time Fourier transform [[papers with code](https://paperswithcode.com/search?q=author%3Adayne+sorvisto)] and its use and applications to data analysis. You can use this special flavor of Fourier transform (no restriction on the data having to be periodic, it just needs to represent a discerte probability distribution) and its inverse to estimate the probability distribution of some finite det of data points and compute a discrete version of the characteristic function. 
+This repository corresponds to a paper on the discrete-time Fourier transform [[papers with code](https://paperswithcode.com/search?q=author%3Adayne+sorvisto)] and its use and applications to data analysis. You can use this special flavor of Fourier transform (no restriction on the data having to be periodic, it just needs to represent a discerte probability distribution) and its inverse to estimate the probability distribution of some finite set of data points and compute a discrete version of the characteristic function. 
 
 What is a characteristic function? For a continuous probability distribution (for example a Normal distribution), this function of a complex variable has many interesting statistical and mathematical properties including completely defining the distribution without loss of information (it is used for example in the proof of the central limit theorem). 
 
