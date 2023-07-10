@@ -10,7 +10,7 @@ This has 2 advantages
 
 2. Once we can embed data in an algebraic object then analytical methods can be applied for more sophisticated and rigorous analysis
 
-## How is this possibld?
+## How do you represent real data in a way that you can manipulate symbolically?
 
 This is possible by defining mathematical transformations for computing these primitive representations.
 
