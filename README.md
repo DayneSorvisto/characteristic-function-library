@@ -2,6 +2,10 @@
 
 This repository corresponds to paper on the discrete-time Fourier transform and its use in data analysis. You can estimate the probability distribution of some data points and then compute a characteristic function. This function has many interesting statistical and mathematical properties. 
 
+# Contributing
+
+If you use this code in a practical example of data analysis please create a PR and share the example.
+
 ## Usage
 
 To compute the characteristic function of a custom data distribution represented as a NumPy nd-array, follow these steps:
@@ -54,6 +58,6 @@ In this example, the random seed is set for reproducibility, and the standard de
 
 ## Philosophy of Algebraic Data Analysis
 
-Algebraic data analysis offers various methods for representing and analyzing data. Currently, the starting point involves estimating a discrete probability distribution from the data and representing it using polynomials. For instance, multiplying polynomials corresponds to the convolution of probability distributions. Another algebraic structure used is the characteristic function, which utilizes the discrete-time Fourier transform to enable data analysis with complex numbers. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions.
+Algebraic data analysis offers various methods for representing and analyzing data using algebra. Currently, the starting point involves estimating a discrete probability distribution from the data and representing it using polynomials. For instance, multiplying polynomials corresponds to the convolution of probability distributions. Another algebraic structure used is the characteristic function, which utilizes the discrete-time Fourier transform to enable data analysis with complex numbers. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions.
 
 
