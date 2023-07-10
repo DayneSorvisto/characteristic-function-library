@@ -43,6 +43,7 @@ import numpy as np
 from algebraic_data_analysis import char, compute_char, proba
 
 # Set random seed for reproducibility and probability of Heads and Tails for a coin toss experiment.
+# Note: You can substitute coin toss experiment for any random process with parameters of your choice.
 sigma = 1
 pr_heads = 0.4
 pr_tails = 0.6
