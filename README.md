@@ -2,12 +2,12 @@
 
 This repository is a practical implmentaton if an emerging field called algebraic statistics.
 
-"Algebraic Statistics" by Peter Bühlmann and Sara van de Geer. [PDF]
-"Algebraic Statistics for Computational Biology" by Mathias Drton. [PDF]
-"Algebraic Methods for Statistical Models and Applications" by Sonja Petrović. [PDF]
-"Introduction to Algebraic Statistics" by Giovanni Pistone. [PDF]
-"Algebraic Methods in Statistics and Probability" by Bernd Sturmfels. [PDF]
-"Algebraic Statistics: A Computational Algebraic Geometry Approach" by Seth Sullivant. [PDF]
+- "Algebraic Statistics" by Peter Bühlmann and Sara van de Geer. [PDF]
+- "Algebraic Statistics for Computational Biology" by Mathias Drton. [PDF]
+- "Algebraic Methods for Statistical Models and Applications" by Sonja Petrović. [PDF]
+- "Introduction to Algebraic Statistics" by Giovanni Pistone. [PDF]
+- "Algebraic Methods in Statistics and Probability" by Bernd Sturmfels. [PDF]
+- "Algebraic Statistics: A Computational Algebraic Geometry Approach" by Seth Sullivant. [PDF]
 
 It aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations. The library offers two key advantages:
 
