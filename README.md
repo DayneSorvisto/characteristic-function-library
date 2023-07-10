@@ -42,10 +42,10 @@ import random
 import numpy as np
 from algebraic_data_analysis import char, compute_char, proba
 
-# Set random seed for reproducibility and define standard deviation and mean.
+# Set random seed for reproducibility and probability of Heads and Tails for a coin toss experiment.
 sigma = 1
-mu = 0
-N = 1000
+pr_heads = 0.4
+pr_tails = 0.6
 
 random.seed(123)
 
@@ -57,11 +57,13 @@ X_train = np.array(...)  # Replace with your custom data generation code
 
 char = compute_char(X_train)
 
-# Estimate probability of events using characteristic function
+# Reverse the process with the inverse transform. For example, estimate probability of events using discrete characteristic function
+# This proves the process worked as expected 
 p, q = [proba(x, char, 2) for x in range(2)]
 
 print(f"The probability of event 0 is {round(p, 2)}")
 print(f"The probability of event 1 is {round(q, 2)}")
+
 ```
 
 In this example, the random seed is set for reproducibility, and the standard deviation (sigma), mean (mu), and training data size (N) are defined. A training dataset X_train is generated using an appropriate method for custom data generation. The probability mass function of the data is estimated using methods such as kernel density estimation. The compute_char function is then used to compute the characteristic function of the discrete distribution based on the training dataset. The proba function is employed to estimate the probabilities of specific events, by passing the event index, the computed characteristic function, and the total number of possible outcomes. The estimated probabilities are printed or further analyzed as needed.
