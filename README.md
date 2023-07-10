@@ -1,4 +1,4 @@
-# Algebraic Data Analysis Library
+# Algebraic Data Analysis Library (Experimental Code) 
 
 Can you do data analysis with complex numbers? Surprisingly, it turns out, yes you can and Python supports complex numbers natively which makes it easier. You can even represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
 
