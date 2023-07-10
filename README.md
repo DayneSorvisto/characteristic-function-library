@@ -1,8 +1,8 @@
 # Algebraic Data Analysis Library
 
-This repository corresponds to paper on the discrete-time Fourier transform and its use in data analysis. You can estimate the probability distribution of some data points and then compute a characteristic function. This function has many interesting statistical and mathematical properties (the continupus version is used for example in the proof of the central limit theorem). 
+This repository corresponds to a  paper on the discrete-time Fourier transform and its use in data analysis. You can use this special flavor of Fourier transform to estimate the probability distribution of some finite det of data points and then compute a discrete version of the characteristic function. For a continuous distribution, this function has many interesting statistical and mathematical properties (it is used for example in the proof of the central limit theorem). 
 
-I've included a few extra functions for reversing the process (characteristic function to probability distribution) and some functions for representing discrete probability distributions as polynomials (multiplication corresponds to convolution). 
+I've included a few extra functions for reversing the process (discrete characteristic function to discrete probability distribution) and some functions for representing discrete probability distributions as polynomials (multiplication corresponds to convolution and can be used for smoothing). 
 
 # Contributing
 
