@@ -18,7 +18,7 @@ To compute the characteristic function of a custom data distribution represented
 
 3. Generate a training dataset `X_train` consisting of `N` data points using any appropriate method.
 
-4. Estimate the probability mass function of the custom data using kernel density methods or other suitable techniques.
+4. Estimate the probability mass function of the custom data using kernel density methods or other suitable techniques. Technically this can be replaced witb a learning algorithm for more complex tabular data sets.
 
 5. Compute the characteristic function by calling the `compute_char` function on the training dataset `X_train`. The resulting characteristic function is stored in the variable `char`.
 
