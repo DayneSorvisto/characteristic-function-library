@@ -8,7 +8,7 @@ What is a characteristic function? For a continuous probability distribution (fo
 
 I've included a few extra functions in this library for reversing the process through the inverse transform (discrete characteristic function to discrete probability distribution) and some functions for representing discrete probability distributions as polynomials (multiplication in this case can be interpreted as convolution and can be used for smoothing). The idea is, you might be able to find your own applications by representing the histogram of your data as some kind of polynomial, multiply polynomials with the characteristic function or with other polynomials to create a data analysis over the complex numbers (the interpretation is the difficult part).
 
-Can you find an interesting use case to real-world data (preferably data that isn't periodic)? 
+Can you find an interesting use case to real-world data (preferably data that isn't periodic)? One way may be feeding coefficients into a another model. 
 
 # Contributing
 
