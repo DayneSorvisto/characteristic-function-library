@@ -1,64 +1,44 @@
 # Algebraic Data Analysis Library
 
-Question: Many models are black boxes. Could data analysis be made more rigorous, transparent and done in a theorem, lemma, corollary style like mathematics? 
+This repository aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations. The library offers two key advantages:
 
-This repository partially answers this by providing experimental Python code for symbolically working with real data by mapping the daga to polynomials and other algebraic constructs. 
+1. Symbolic representation of data analysis: By representing data symbolically using algebraic objects, such as polynomials or functions of complex variables, data analysis becomes more expressive and interpretable.
 
-This has 2 advantages
+2. Rigorous analysis with analytical methods: Once data is embedded in an algebraic object, analytical methods can be applied for more sophisticated and rigorous analysis.
 
-1. Data analysis can be represented symbolically
+## Representing Real Data as Polynomials
 
-2. Once we can embed data in an algebraic object then analytical methods can be applied for more sophisticated and rigorous analysis
+many models are black boxes and although you could use say linear regression to represent data as a polynomial, it may not make sense to say multiply 2 polynomials together. There's a more natural way to represent data as polynomials. In this way, real data can be manipulated symbolically by defining mathematical transformations that compute primitive representations. By representing data as polynomials or other advanced algebraic constructs (e.g., functions of complex variables), it becomes possible to apply algebraic methods and operations for analysis. The algebraic representation is "learned" from the data by estimating a discrete probability distribution. The choice of the learning phase workflow is flexible. Once the initial learning phase is complete, the transformations used are deterministic and strictly algebraic, existing within a vector space (with potential support for more general algebraic spaces like commutative rings in the future).
 
-## How do you represent real data in a way that you can manipulate symbolically?
+## Benefits of Algebra for Data Analysis
 
-This is possible by defining mathematical transformations for computing these primitive representations.
-
-Once you represent data as a polynomial or other more advanced algebraic construct (like a function of a complex variable) in this way you can analyze it using algebraic methods and operations.
-
-Note: The algebraic representation is technically "learned" from the data by first estimating a discrete probaility distribution and there are no restrictions on how this part of the workflow is chosen. After this initial learning phase, transformations used are deterministic and strictly algebraic in nature, existing in a vector space (in the future more general algebraic spaces like commutative rings may be supported and determined by the type of problem and data).
-
-## Why use algebra for data analysis?
-
-Representing real-world data on a computer using algebraic objects like polynomials has some interesting applications including a more elegant and rigorous way to analyze data using mathematical notation. 
-
-The ultimate goal is to represent all data analysis operations symbolically as algebraic operations that exist inside of some more abstract algebraic structure like a vector space or commutative ring where regular math can be applied. 
+Using algebraic objects, such as polynomials, to represent real-world data brings several advantages, including a more elegant and rigorous approach to data analysis using mathematical notation. The ultimate goal is to represent all data analysis operations symbolically as algebraic operations within abstract algebraic structures like vector spaces or commutative rings, enabling the application of regular mathematical techniques.
 
 ## Basic Theory
 
-Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are already widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
-
-The code provides basic functions for performing algebraic data analysis. 
-
-It demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform. Additionally, it includes functions for representing discrete distributions as polynomials, working with discrete probability distributions using basic algebra.
-
-Foundations are based on paper [Papers with code](https://paperswithcode.com/paper/algebraic-data-analysis)
+Polynomial operations, like multiplication, naturally correspond to the convolution of probability distributions. Data analysis methods, such as Fourier transforms, can be applied to these distributions, yielding algebraic objects like characteristic functions, which possess useful properties. The code in this library provides basic functions for performing algebraic data analysis. It demonstrates how to represent and compute Bayes' rule using polynomials, estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform, and work with discrete probability distributions using basic algebra. The foundations of this library are based on the paper [Papers with code](https://paperswithcode.com/paper/algebraic-data-analysis).
 
 ## Data Analysis Workflow
 
-A typical workflow would be to first choose a representation of your data for example an array (that exists inside a abstract vector space).
+The typical workflow involves choosing a representation for the data, such as an array existing within an abstract vector space. The initial phase of the workflow is to learn a discrete probability distribution that represents the data, usually by estimating it from the data stored in an array. The array choice allows for additional tensor operations, which can be performed at any point during the analysis. Mathematical transformations between vector spaces are then applied to represent the data as algebraic objects, such as polynomials or functions of complex variables. The two primary representations currently supported are polynomials and characteristic functions (functions of a single complex variable). The computation of characteristic functions involves Fourier transforms, specifically the discrete-time Fourier transform, with special treatment for probability distributions.
 
-The initial phase of the workflow is to first learn discrete probaility distribution that represents the data, represented as an array on a computer. An array is chosen so additional tensor operations (symbolically you can write these symbolically using einsums and can be additionally learned) can be performed at any point in thr analysis.
-
-The final array can be fed into mathematical transformations between vector spaces to represent the data as algebraic objects like polynomials or functions of a complex variable. The two main representations currently are polynomials and characteristic functions (a function of a single complex variable). The later is computed using Fourier transforms, specifically the discrete-time Fourier transform with special treatment for probability distributions.
-
-To do: Add a diagram if workflow and example symbolic analysis in LaTex
+*Note: A diagram illustrating the workflow and an example of symbolic analysis in LaTeX will be added.*
 
 ## Usage
 
-To use the code for computing the characteristic function of a custom data distribution represented as a NumPy nd-array, follow these steps:
+To compute the characteristic function of a custom data distribution represented as a NumPy nd-array, follow these steps:
 
 1. Install the required dependencies, such as NumPy.
 
 2. Set the random seed for reproducibility and define the standard deviation (`sigma`), mean (`mu`), and training data size (`N`).
 
-3. Generate a training dataset `X_train` consisting of N data points. You can use any method to generate your custom data.
+3. Generate a training dataset `X_train` consisting of `N` data points using any appropriate method.
 
-4. Use kernel density methods or any other appropriate techniques to estimate the probability mass function of the custom data.
+4. Estimate the probability mass function of the custom data using kernel density methods or other suitable techniques.
 
 5. Compute the characteristic function by calling the `compute_char` function on the training dataset `X_train`. The resulting characteristic function is stored in the variable `char`.
 
-6. Estimate the probability of events using the `proba` function for the desired outcomes. Pass the event index, the characteristic function, and the total number of possible outcomes as inputs. The probabilities are stored in variables `p`, `q`, and so on, depending on the number of outcomes.
+6. Estimate the probability of desired events using the `proba` function. Provide the event index, the characteristic function, and the total number of possible outcomes as inputs. The probabilities are stored in variables `p`, `q`, etc., depending on the number of outcomes.
 
 7. Print or further analyze the estimated probabilities.
 
@@ -90,40 +70,24 @@ p, q = [proba(x, char, 2) for x in range(2)]
 
 print(f"The probability of event 0 is {round(p, 2)}")
 print(f"The probability of event 1 is {round(q, 2)}")
-```
 
-## Explanation 
-
-In this example, we first set the random seed for reproducibility and define the standard deviation (sigma), mean (mu), and training data size (N).
-
-Next, we generate a training dataset X_train using any method suitable for your custom data (for example Kernel Density Estimation or a neural network). This could include data generation using random processes, real-world data, or any other appropriate technique.
-
-After generating the training dataset, you can estimate the probability mass function of the data using kernel density estimation or any other appropriate methods.
-
-Then, the compute_char function is used to compute the characteristic function of the discrete distribution based on the training dataset.
-
-The proba function is used to estimate the probabilities of specific events. You can pass the event index, the computed characteristic function, and the total number of possible outcomes to the proba function.
-
-The estimated probabilities are printed or further analyzed as needed.
+In this example, the random seed is set for reproducibility, and the standard deviation (sigma), mean (mu), and training data size (N) are defined. A training dataset X_train is generated using an appropriate method for custom data generation. The probability mass function of the data is estimated using methods such as kernel density estimation. The compute_char function is then used to compute the characteristic function of the discrete distribution based on the training dataset. The proba function is employed to estimate the probabilities of specific events, by passing the event index, the computed characteristic function, and the total number of possible outcomes. The estimated probabilities are printed or further analyzed as needed.
 
 ## Philosophy of Algebraic Data Analysis
 
-Algebraic data analysis provides various methods for representing and analyzing data. The starting point is as of now estimating a discrete probability distribution from the data and representing this using polynomials. For example multiplying polynomials corresponds to convolution of probability distributions. The characteristic function is another more complex algebraic structure using the discrete-time Fourier transform that allows data analysis using complex numbers. By leveraging basic algebraic operations corresponding to convolutions, fourier transforms and smoothing operations you can perform powerful, elegant data analysis and inference tasks on discrete probability distributions.
+Algebraic data analysis offers various methods for representing and analyzing data. Currently, the starting point involves estimating a discrete probability distribution from the data and representing it using polynomials. For instance, multiplying polynomials corresponds to the convolution of probability distributions. Another algebraic structure used is the characteristic function, which utilizes the discrete-time Fourier transform to enable data analysis with complex numbers. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions.
 
 ## Contributions
 
-Contribute to the project by creaitng a PR. The library is currently very basic and not easy to use. 
+Contributions to the project are welcome via pull requests. The library is currently in its early stages and lacks ease of use. You can improve the accuracy or usability of the library or add new functions based on current papers in algebraic data analysis. All implementations should have practical use cases and be able to work with real-world data, accompanied by appropriate documentation.
 
-Improve the accuracy or ease of use of the library or add new functions based on current papers in algebraic data analysis. All implementations should have practical use and be able to work on real world data with appropriate documentation. 
+Areas that require work (first-time contributions are welcome) include:
 
-Area that need work (first time contributions are welcome):
-
-- Real world or interesting examples with actual data sets
-- Links to other papers and work on algebraic data analysis (please add these to README)
-- Algebraic implemention of Bayes Rule (see probaility distributions module)
-- Creating PyPi package that can be used for algebraic data analysis in production environment
-- Einsums for representing tensor operations 
-- Connections to topological data analysis
-- Support for algebraic geometry, commutative algebra, and combinatorics
-
-
+Providing real-world or interesting examples with actual datasets.
+Adding links to other papers and work on algebraic data analysis in the README.
+Implementing algebraic versions of Bayes' Rule (see probability distributions module).
+Creating a PyPi package suitable for algebraic data analysis in production environments.
+Incorporating einsums for representing tensor operations.
+Exploring connections to topological data analysis.
+Supporting algebraic geometry, commutative algebra, and combinatorics.
+Feel free to contribute in any of these areas or suggest other improvements to enhance the library.
