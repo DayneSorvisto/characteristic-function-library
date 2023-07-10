@@ -16,9 +16,11 @@ The ultimate goal is to represent all data analysis operations symbolically as a
 
 ## Basic Theory
 
-Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are alreqdy widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
+Polynomial operations such as multiplication naturally correspond to convolution of probability distributions and we can apply data analysis methods like Fourier transforms on these distributions to create algebraic objects like characteristic functions (these are already widely used in statistics for example in the proof of the central limit theorm) which have many useful properties. 
 
-The code provides basic functions for performing algebraic data analysis. It demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform. Additionally, it includes functions for representing discrete distributions as polynomials, working with discrete probability distributions using basic algebra.
+The code provides basic functions for performing algebraic data analysis. 
+
+It demonstrates how to represent and compute Bayes' rule using polynomials, as well as how to estimate the characteristic function of a discrete distribution using the discrete-time Fourier transform. Additionally, it includes functions for representing discrete distributions as polynomials, working with discrete probability distributions using basic algebra.
 
 Foundations are based on paper [Papers with code](https://paperswithcode.com/paper/algebraic-data-analysis)
 
@@ -29,6 +31,8 @@ A typical workflow would be to first choose a representation of your data for ex
 The initial phase of the workflow is to first learn discrete probaility distribution that represents the data, represented as an array on a computer. An array is chosen so additional tensor operations (symbolically you can write these symbolically using einsums and can be additionally learned) can be performed at any point in thr analysis.
 
 The final array can be fed into mathematical transformations between vector spaces to represent the data as algebraic objects like polynomials or functions of a complex variable. The two main representations currently are polynomials and characteristic functions (a function of a single complex variable). The later is computed using Fourier transforms, specifically the discrete-time Fourier transform with special treatment for probability distributions.
+
+To do: Add a diagram if workflow and example symbolic analysis in LaTex
 
 ## Usage
 
