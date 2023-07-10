@@ -1,6 +1,10 @@
 # Algebraic Data Analysis Library
 
-This repository aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations. The library offers two key advantages:
+This repository is an imllementaton if an emerging field calle algebraic statiatical.
+
+To do: Links to papers and repos on algebraic statistics.
+
+It aims to bring rigor and transparency to data analysis by applying algebraic concepts in a theorem, lemma, and corollary style, similar to mathematics. The provided experimental Python code allows symbolic manipulation of real data by mapping it to polynomials that can then be manipulated using algebraic operations. The library offers two key advantages:
 
 1. Symbolic representation of data analysis: By representing data symbolically using algebraic objects, such as polynomials or functions of complex variables, data analysis becomes more expressive and interpretable.
 
