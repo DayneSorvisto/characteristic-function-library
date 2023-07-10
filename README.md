@@ -24,7 +24,7 @@ To compute the characteristic function of a custom data distribution represented
 
 1. Install the required dependencies, such as NumPy.
 
-2. Set the random seed for reproducibility and define the standard deviation (`sigma`), mean (`mu`), and training data size (`N`).
+2. Set the random seed for reproducibility and define the parameters of your random process or distribution.
 
 3. Generate a training dataset `X_train` consisting of `N` data points using any appropriate method.
 
