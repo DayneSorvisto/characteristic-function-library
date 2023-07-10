@@ -2,7 +2,7 @@
 
 Question: Many models are black boxes. Could data analysis be made more rigorous, transparent and done in a theorem, lemma, corollary style like mathematics? 
 
-This repository provides experimental Python code for symbolically working with real data by mapping the daga to polynomials and other algebraic constructs. 
+This repository partially answers this by providing experimental Python code for symbolically working with real data by mapping the daga to polynomials and other algebraic constructs. 
 
 This has 2 advantages
 
