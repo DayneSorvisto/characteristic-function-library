@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library
 
-This repository is an imllementaton if an emerging field calle algebraic statiatical.
+This repository is a practical implmentaton if an emerging field called algebraic statistics.
 
 To do: Links to papers and repos on algebraic statistics.
 
