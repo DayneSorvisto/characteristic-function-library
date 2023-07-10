@@ -1,6 +1,16 @@
 # Algebraic Data Analysis Library
 
-This repository provides experimental Python code for symbolically working with real data using polynomials and other algebraic constructs. 
+Question: Could data analysis be made more rigorous and done in a theorem, lemma, corollary style like mathematics? 
+
+This repository provides experimental Python code for symbolically working with real data by mapping the daga to polynomials and other algebraic constructs. 
+
+This has 2 advantages
+
+1. Data analysis can be represented symbolically
+
+2. Once we can embed data in an algebraic object then analytical methods can be applied for more sophisticated and rigorous analysis
+
+## How is this possibld?
 
 This is possible by defining mathematical transformations for computing these primitive representations.
 
