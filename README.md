@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library
 
-Question: Could data analysis be made more rigorous and done in a theorem, lemma, corollary style like mathematics? 
+Question: Many models are black boxes. Could data analysis be made more rigorous, transparent and done in a theorem, lemma, corollary style like mathematics? 
 
 This repository provides experimental Python code for symbolically working with real data by mapping the daga to polynomials and other algebraic constructs. 
 
