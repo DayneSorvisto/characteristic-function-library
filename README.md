@@ -8,7 +8,7 @@ This repository aims to bring rigor and transparency to data analysis by applyin
 
 ## Representing Real Data as Polynomials
 
-Many models are black boxes and although you could use for example, linear regression to represent data as a polynomial, it may not make sense to multiply 2 polynomial models together or otherwise apply any kind of algebraic operations to the model. 
+Many models are black boxes and although you could use for example, linear regression to represent data as a polynomial, it may not make sense to multiply 2 polynomial models together or otherwise apply any kind of algebraic operations to the model. Furthermore, you cannot compare different analyses. 
 
 There's a more natural way to represent data as polynomials. In this way, real data can be manipulated symbolically by defining mathematical transformations that compute primitive representations. By representing data as polynomials or other advanced algebraic constructs (e.g., functions of complex variables), it becomes possible to apply algebraic methods and operations for analysis. The algebraic representation is "learned" from the data by estimating a discrete probability distribution. The choice of the learning phase workflow is flexible. Once the initial learning phase is complete, the transformations used are deterministic and strictly algebraic, existing within a vector space (with potential support for more general algebraic spaces like commutative rings in the future).
 
