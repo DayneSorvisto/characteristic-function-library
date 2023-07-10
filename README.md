@@ -1,6 +1,8 @@
 # Algebraic Data Analysis Library
 
-This repository is a practical implementaton of ideas from an emerging field called algebraic statistics that can be applied to real world data.
+This repository is a practical implementaton of ideas from an emerging field called algebraic statistics that can be applied to real world data. If you are able to use this library in a real data science project please submit a PR with your example code.
+
+Here are some papers related tk algebraic statistics, the mathematical foundations of this library:
 
 - "Algebraic Statistics" by Peter Bühlmann and Sara van de Geer. [PDF]
 - "Algebraic Statistics for Computational Biology" by Mathias Drton. [PDF]
