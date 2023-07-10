@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library
 
-Can you do data analysis with complex numbers? It turns out, yes you can.
+Can you do data analysis with complex numbers? It turns out, yes you can. You can even represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions. 
 
 This repository corresponds to a paper on the discrete-time Fourier transform ([papers with code](https://paperswithcode.com/search?q=author%3Adayne+sorvisto)] and its use and applications to data analysis. You can use this special flavor of Fourier transform to estimate the probability distribution of some finite det of data points and then compute a discrete version of the characteristic function. For a continuous distribution, this function has many interesting statistical and mathematical properties (it is used for example in the proof of the central limit theorem). 
 
@@ -8,7 +8,7 @@ I've included a few extra functions for reversing the process (discrete characte
 
 # Contributing
 
-Despite the wide-spread use of Fourier transforms in signal processing and time series (especially seasonal data or data that is periodic in nature), applying the Discrete-time Fourier transform to discrete probability distributions to do data analysis is a less well-known technique (the continuous version is widely applied in mathematicla statistics).
+Despite the wide-spread use of Fourier transforms in signal processing and time series (especially seasonal data or data that is periodic in nature), applying the discrete-time Fourier transform to discrete probability distributions to do data analysis is a less well-known technique (the continuous version is widely applied in mathematicla statistics).
 
 If you use this code in a practical example of data analysis please create a PR and share the example (I'm interested in seeing different ways to interpret the characteristic function with real world data or any surprising applications).
 
