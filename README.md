@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library
 
-Can you do data analysis with complex numbers? Surprisingly, it turns out, yes you can. You can even represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
+Can you do data analysis with complex numbers? Surprisingly, it turns out, yes you can and Python supports complex numbers natively which makes it easier. You can even represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
 
 This repository corresponds to a paper on the discrete-time Fourier transform ([papers with code](https://paperswithcode.com/search?q=author%3Adayne+sorvisto)] and its use and applications to data analysis. You can use this special flavor of Fourier transform to estimate the probability distribution of some finite det of data points and then compute a discrete version of the characteristic function. For a continuous distribution, this function has many interesting statistical and mathematical properties (it is used for example in the proof of the central limit theorem). 
 
