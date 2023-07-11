@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library (Experimental Code) 
 
-Can you do data analysis with imaginary numbers? Surprisingly, it turns out, yes you can and Python supports imaginary/complex numbers natively which makes it easier. 
+What happens when you represent a probability distribution as a polynomial? It turns out, there's several interesting ways to do this and polynomial multiplication has a natural interpetation as convolution.
 
 The abstraction that makes it all work is a special flavour of Fourier transform called the discrete-time Fourier transform which plays well under convolution operation and can be applied to probability distributions rather than periodic or seasonal time series data. Through this Fourier transform, you can represent discrete probability distributions as polynomials, multiply them together and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
 
