@@ -10,7 +10,7 @@ The abstraction that makes it all work is a special flavour of Fourier transform
 
 Through this Fourier transform, you can represent discrete probability distributions as polynomials, multiply them and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
 
-## How would you do data analysis using this? 
+## What is functional data analysis? 
 
 The idea for this library is proof of concept for a framewok for functional data analysis based on tensor operations (rather than frameworks that are essentially black boxes). The magic that makes it all work is the Fourier transform (technical details to follow):
 
