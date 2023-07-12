@@ -1,6 +1,6 @@
 # Algebraic Data Analysis Library (Experimental Code) 
 
-While widely used throughout mathematical statistics, signal processing and many other fields, the Fourier transform does not get enough credit in data science libraries. This library is a framework (proof of concept) for demonstrating the general use of Fourier transform in data analysis beyond signal processing and periodic time series and is primarily based on a mathematical operation called convolution.
+While widely used throughout mathematical statistics, engineering, signal processing, time series and seasonal data, scientific computing and many other fields, the Fourier transform does not get enough credit in more general data science libraries for general purpose data analysis. This library is a framework (proof of concept) for demonstrating the general use of Fourier transform to arbitrary tensor data and is primarily based on a mathematical operation called convolution.
 
 ## Technical Motivation and Intuition 
 
