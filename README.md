@@ -1,7 +1,8 @@
 # Algebraic Data Analysis Library (Experimental Code) 
 
 While widely used throughout mathematical statistics, signal processing and many other fields, the Fourier transform does not get enough credit in other kinds of (general) data analysis. This library is a framework (proof of concept) for demonstrating the general use of Fourier transform in data analysis beyond signal processing and periodic time series and is primarily based on a mathematical operation called convolution.
-## Technical Details 
+
+## Technical Motivation and Intuition 
 
 What happens when you represent a probability distribution as a polynomial? It turns out, there's several interesting ways to do this and polynomial multiplication has a natural interpetation as convolution. This gives rise to a kind of "functional" data analysis workflow that can be generalized to data represented as arbitrary tensors.
 
