@@ -1,9 +1,9 @@
 # Algebraic Data Analysis Library (Experimental Code) 
 
 Convolution and Fourier transforms are mathematically connected through the Convolution Theorem, which states that convolution in the time domain is equivalent to multiplication in the frequency domain. This connection is a fundamental property of Fourier transforms and provides a powerful tool for analyzing signals and systems.
-It can also be applied to probability distributons not just signals, time series and seasonal data but any kind of data. 
+It can also be applied to probability distributons not just signals. In fact the characteristic function of a probability distribution is widely used in mathematical statistics (such as proof of the central limit theorem).  
 
-What would a data analysis library based on convolution look like? This library is a proof of concept based around convolution. 
+What would a data analysis library based on convolution look like? This library is a proof of concept based around explicit convolution of data stored as tensors without need for Convolutional Neural Networks. 
 
 ## Technical Motivation and Intuition 
 
