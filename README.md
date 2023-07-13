@@ -1,6 +1,9 @@
 # Algebraic Data Analysis Library (Experimental Code) 
 
-While widely used throughout applied mathematics, mathematical statistics, engineering (especially signal processing, time series and seasonal data) and many other fields, the Fourier transform does not get enough credit in more general "data science" libraries for general purpose data analysis. This library is a framework (proof of concept) for demonstrating the general use of Fourier transform to arbitrary tensor data and is primarily based on a mathematical operation called convolution.
+Convolution and Fourier transforms are mathematically connected through the Convolution Theorem, which states that convolution in the time domain is equivalent to multiplication in the frequency domain. This connection is a fundamental property of Fourier transforms and provides a powerful tool for analyzing signals and systems.
+It can also be applied to probability distributons not just signals, time series and seasonal data but any kind of data. 
+
+What would a data analysis library based on convolution look like? This library is a proof of concept based around convolution. 
 
 ## Technical Motivation and Intuition 
 
