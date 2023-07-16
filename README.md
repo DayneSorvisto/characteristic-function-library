@@ -1,6 +1,8 @@
 # Algebraic Data Analysis Library 
 
-The following library contains experimental code, methods and techniques for representing data as polynomials and other algebraic constructs. Some applications of the library include:
+What would a data analysis library based on polynomials look like?
+
+The following library contains experimental code, methods and techniques for representing data as polynomials. We can do this in many intetresting ways such as using Fourier transforms or representing our probability distributions as graphs and computing a graph polynomial. Polynomial operations also have interesting interpretations such as convolution. 
 
 ## Pragmatic Use Cases of of this Library
 
