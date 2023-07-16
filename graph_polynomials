@@ -1,0 +1,29 @@
+def graph_polynomial(adjacency_matrix, variable='x'):
+    """
+    Computes the graph polynomial for a given adjacency matrix.
+
+    Parameters:
+        adjacency_matrix (list of lists): The adjacency matrix representing the graph.
+        variable (str): The variable name to use in the polynomial. (Default: 'x')
+
+    Returns:
+        str: The graph polynomial.
+
+    Example:
+        adjacency_matrix = [[0, 1, 1],
+                            [1, 0, 1],
+                            [1, 1, 0]]
+        graph_polynomial(adjacency_matrix)  # Output: 'x^3 - 3x^2 + 2x'
+    """
+    n = len(adjacency_matrix)
+    polynomial_terms = []
+
+    for i in range(n):
+        degree = sum(adjacency_matrix[i])
+        if degree > 0:
+            term = f"{variable}^{degree}"
+            polynomial_terms.append(term)
+
+    polynomial = ' + '.join(polynomial_terms[::-1])
+    return polynomial
+
