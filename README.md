@@ -50,8 +50,9 @@ What happens when you represent a probability distribution as a polynomial? It t
 
 The abstraction that makes it all work is a special flavour of Fourier transform called the discrete-time Fourier transform (with some special treatment for probability) which plays well under convolution operation and can be applied to any kind of tensor data (array, matrix or more general tensor). 
 
-Through this Fourier transform, you can represent discrete probability distributions as polynomials, multiply them and interpet the result as a convolution of the two distributions (after normalizing the coefficients). 
+There are other ways to represent data as polynomials such as graph polynomials (after encoding your probability distribution as a graph).
 
+Through this Fourier transform, you can represent discrete probability distributions as polynomials, multiply them and interpet the result as a convolution or some other mathematical operation and perform symbolic data analysis.
 
 # Contributing
 
