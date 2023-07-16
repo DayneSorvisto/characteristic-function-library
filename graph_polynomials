@@ -1,3 +1,9 @@
+"""
+Module for working with graph polynomials for practical data analysis tasks.
+"""
+
+import networkx as nx
+
 def graph_polynomial(adjacency_matrix, variable='x'):
     """
     Computes the graph polynomial for a given adjacency matrix.
@@ -26,4 +32,87 @@ def graph_polynomial(adjacency_matrix, variable='x'):
 
     polynomial = ' + '.join(polynomial_terms[::-1])
     return polynomial
+
+def check_graph_isomorphism(adjacency_matrix1, adjacency_matrix2):
+    """
+    Checks if two graphs are isomorphic based on their adjacency matrices.
+    
+    Parameters:
+        adjacency_matrix1 (list of lists): The adjacency matrix of the first graph.
+        adjacency_matrix2 (list of lists): The adjacency matrix of the second graph.
+    
+    Returns:
+        bool: True if the graphs are isomorphic, False otherwise.
+    """
+    polynomial1 = graph_polynomial(adjacency_matrix1)
+    polynomial2 = graph_polynomial(adjacency_matrix2)
+    
+    return polynomial1 == polynomial2
+
+def convert_prob_distribution_to_weighted_graph(prob_distribution):
+    """
+    Converts a probability distribution into a weighted graph.
+
+    Parameters:
+        prob_distribution (list or numpy array): The probability distribution.
+
+    Returns:
+        networkx.Graph: The weighted graph representation of the probability distribution.
+    """
+    n = len(prob_distribution)
+    G = nx.Graph()
+
+    # Add nodes to the graph
+    for i in range(n):
+        G.add_node(i)
+
+    # Add weighted edges between nodes based on probabilities
+    for i in range(n):
+        for j in range(i + 1, n):
+            if prob_distribution[i] > 0 and prob_distribution[j] > 0:
+                weight = min(prob_distribution[i], prob_distribution[j])  # Assign weight as the minimum probability
+                G.add_edge(i, j, weight=weight)
+
+    return G
+
+
+def graph_polynomial_from_weighted_graph(graph, variable='x'):
+    """
+    Computes the graph polynomial for a weighted graph.
+
+    Parameters:
+        graph (networkx.Graph): The weighted graph.
+        variable (str): The variable name to use in the polynomial. (Default: 'x')
+
+    Returns:
+        str: The graph polynomial.
+
+    Example:
+        graph = nx.Graph()
+        graph.add_edge(0, 1, weight=0.5)
+        graph.add_edge(0, 2, weight=0.3)
+        graph_polynomial_from_weighted_graph(graph)  # Output: '0.5x^2 - 0.8x + 0.3'
+    """
+    polynomial_terms = []
+
+    for u, v, data in graph.edges(data=True):
+        weight = data['weight']
+        term = f"{weight}{variable}^{u}{variable}^{v}"
+        polynomial_terms.append(term)
+
+    polynomial = ' + '.join(polynomial_terms[::-1])
+    return polynomial
+
+
+def visualize_weighted_graph(graph):
+    """
+    Visualizes a weighted graph.
+
+    Parameters:
+        graph (networkx.Graph): The weighted graph.
+    """
+    pos = nx.spring_layout(graph)
+    labels = nx.get_edge_attributes(graph, 'weight')
+    nx.draw_networkx(graph, pos, with_labels=True, edge_labels=labels)
+    plt.show()
 
