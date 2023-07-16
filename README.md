@@ -2,6 +2,8 @@
 
 The following library contains experimental code, methods and techniques for representing data as polynomials and other algebraic constructs. Some applications of the library include:
 
+## Pragmatic Use Cases of of this Library
+
 Visualizing Relationships: By representing a probability distribution as a graph, you can visualize the relationships or dependencies between different events or variables. The edges between vertices can indicate the existence of potential dependencies or interactions.
 
 Graph Analytics: Once the probability distribution is converted into a graph, you can apply various graph analytics techniques to gain insights into the distribution. For example, you can calculate centrality measures to identify the most influential events, detect communities or clusters of related events, or analyze the overall connectivity and structure of the distribution. You can check if 2 polynomials are equal (in coefficients) to check graph isomorphism.
