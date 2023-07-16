@@ -2,7 +2,9 @@
 
 What would a data analysis library based on polynomials look like?
 
-The following library contains experimental code, methods and techniques for representing data as polynomials. We can do this in many intetresting ways such as using Fourier transforms or representing our probability distributions as graphs and computing a graph polynomial. Polynomial operations also have interesting interpretations such as convolution. 
+The following library contains experimental code, methods and techniques for representing data as polynomials. 
+
+There are many ways to do this including polynomial regression, graph polynomials, characteristic functions and more. Polynomial operations also have interesting interpretations such as convolution which lends itself to many different types of analyses. 
 
 ## Pragmatic Use Cases of of this Library
 
