@@ -86,20 +86,9 @@ In this example, the random seed is set for reproducibility, and parameters of a
 
 I've also added some additional functions for working with convolutions and defining graph polynomials that you might find useful. Polynomial multiplicaiton corresponds to convolution. 
 
-## Example Working with Graph Polynomials 
+## Philosophy of Library
 
-```
-# Example probability distribution
-prob_distribution = [0.2, 0.5, 0.1, 0.3]
-
-# Convert probability distribution to graph
-adjacency_matrix = convert_prob_distribution_to_graph(prob_distribution)
-
-# Compute graph polynomial
-polynomial = graph_polynomial(adjacency_matrix)
-print(polynomial)
-```
-## Philosophy of Algebraic Data Analysis
+Library currently provides two methods fit and reverse. Fit will take a tensor and estiamate a discrete version of the characteristic function while reverse takes a characteristic function and reverses process. You can use reverse to recover the original probability distribution.
 
 The Fourier transform provides many equivalences between different areas and has unique applications to data analysis. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions by using characteristic functions.
 
