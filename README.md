@@ -10,12 +10,11 @@ If a random variable has a probability density function then the characteristic 
 
 ![image description](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sinc_simple.svg/280px-Sinc_simple.svg.png)
 
+Interestingly, characteristc functions can be generalized to tensors as well so library could be extended for data analysis with arbitrary tensor data. 
+
 ## Use in Data Analysis 
 
 Characteristic functions can be used as part of procedures for fitting probability distributions to samples of data. Cases where this provides a practicable option compared to other possibilities include fitting the stable distribution since closed form expressions for the density are not available which makes implementation of maximum likelihood estimation difficult. Estimation procedures are available which match the theoretical characteristic function to the empirical characteristic function, calculated from the data. Paulson et al. (1975)[19] and Heathcote (1977)[20] provide some theoretical background for such an estimation procedure. In addition, Yu (2004)[21] describes applications of empirical characteristic functions to fit time series models where likelihood procedures are impractical. Empirical characteristic functions have also been used by Ansari et al. (2020)[22] and Li et al. (2020)[23] for training generative adversarial networks.
-
-
-
 
 then the characteristic function is the Fourier transform of the probability density function. Thus it provides an alternative route to analytical results compared with working directly with probability density functions or cumulative distribution functions. There are particularly simple results for the characteristic functions of distributions defined by the weighted sums of random variables.
 
