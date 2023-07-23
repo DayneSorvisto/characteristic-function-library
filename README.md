@@ -83,10 +83,6 @@ print(f"The probability of event 1 is {round(q, 2)}")
 
 In this example, the random seed is set for reproducibility, and parameters of a random process are defined (in this case coin toss experiment), and training data size (N) are defined. A training dataset X_train is generated using an appropriate method for custom data generation. The probability mass function of the data is estimated using methods such as kernel density estimation. The compute_char function is then used to compute the characteristic function of the discrete distribution based on the training dataset. The proba function is employed to estimate the probabilities of specific events, by passing the event index, the computed characteristic function, and the total number of possible outcomes. The estimated probabilities are printed or further analyzed as needed.
 
-## Additional functionality
-
-I've also added some additional functions for working with convolutions and defining graph polynomials that you might find useful. Polynomial multiplicaiton corresponds to convolution. 
-
 ## Philosophy of Library
 
 Library currently provides two methods fit and reverse. Fit will take a tensor and estiamate a discrete version of the characteristic function while reverse takes a characteristic function and reverses process. You can use reverse to recover the original probability distribution.
