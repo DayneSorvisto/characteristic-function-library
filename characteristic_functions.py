@@ -8,7 +8,6 @@ import numpy as np
 from algebraic_data_analysis import char, compute_char, proba
 
 # set random seed for reproducibility. define standard deviation and mean.
-sigma = 1
 mu = 0
 N = 1000
 
