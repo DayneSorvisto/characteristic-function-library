@@ -16,12 +16,7 @@ Interestingly, characteristc functions can be generalized to tensors as well so 
 
 Characteristic functions can be used as part of procedures for fitting probability distributions to samples of data. Cases where this provides a practicable option compared to other possibilities include fitting the stable distribution since closed form expressions for the density are not available which makes implementation of maximum likelihood estimation difficult. Estimation procedures are available which match the theoretical characteristic function to the empirical characteristic function, calculated from the data. Paulson et al. (1975)[19] and Heathcote (1977)[20] provide some theoretical background for such an estimation procedure. In addition, Yu (2004)[21] describes applications of empirical characteristic functions to fit time series models where likelihood procedures are impractical. Empirical characteristic functions have also been used by Ansari et al. (2020)[22] and Li et al. (2020)[23] for training generative adversarial networks.
 
-then the characteristic function is the Fourier transform of the probability density function. Thus it provides an alternative route to analytical results compared with working directly with probability density functions or cumulative distribution functions. There are particularly simple results for the characteristic functions of distributions defined by the weighted sums of random variables.
-
-We define a discrete analogue of the characteristic function for discrete random variable and develop numerical procedures for computing the discrete characteristic function for several well-known discrete random variables. We rigorously define what is meant by the Fourier transform of a probability mass function and also show how to reverse the process to recover the probability mass function of a discrete random variable, given a procedure for computing the characteristic function. Unlike previous work on the subject, our approach is novel in that we are not computing closed-form solutions of a continuous random variable but are focused on applying the methods to real-world data sets.
-
-
-
+Since the characteristic function is the Fourier transform of the probability density function. Thus it provides an alternative route to analytical results compared with working directly with probability density functions or cumulative distribution functions. There are particularly simple results for the characteristic functions of distributions defined by the weighted sums of random variables. 
 
 # Contributing
 
