@@ -16,9 +16,9 @@ random.seed(123)
 # training data size = N
 X_train = np.array([random.choice(['H', 'T']) for _ in np.arange(N)])
 
-char = compute_char(X_train)
+char = fit(X_train)
 
-p , q = [proba(x, char, 2) for x in range(2) ]
+p , q = [reverse(x, char, 2) for x in range(2) ]
 
 print(f"The probability of heads is {round(p,2)}")
 
