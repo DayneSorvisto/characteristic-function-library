@@ -52,7 +52,7 @@ Here's an example usage:
 import math
 import random
 import numpy as np
-from algebraic_data_analysis import char, compute_char, proba
+from algebraic_data_analysis import fit, reverse
 
 # Set random seed for reproducibility and probability of Heads and Tails for a coin toss experiment.
 # Note: You can substitute coin toss experiment for any random process with parameters of your choice.
@@ -67,11 +67,11 @@ X_train = np.array(...)  # Replace with your custom data generation code
 # Estimate probability mass function using appropriate methods
 # For example, kernel density estimation or any other technique
 
-char = char.fit(X_train)
+char = fit(X_train)
 
 # This process is reversible, we can recover the original distribution. Reverse the process with the inverse transform.
 # This proves the process worked as expected 
-p, q = [proba(x, char, 2) for x in range(2)]
+p, q = [reverse(x, char, 2) for x in range(2)]
 
 print(f"The probability of event 0 is {round(p, 2)}")
 print(f"The probability of event 1 is {round(q, 2)}")
