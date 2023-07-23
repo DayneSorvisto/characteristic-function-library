@@ -2,7 +2,9 @@
 
 This library is an implementation of a data science paper on using characteristic functions for data analysis. [Characteristic functions](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) 
 
-In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information). They are used in many proofs like the proof of the central limit theorem but not widely used in practical data analysis. 
+In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information). They are used in many proofs like the proof of the central limit theorem but not widely used in practical data analysis. Fortunately Python supports complex numbers natively which makes implementation straightforward. 
+
+## Technical Details: Adapting characteristic functions to real world data and tensors
 
 If a random variable has a probability density function then the characteristic function is the Fourier transform of the probability density function. For a real world application based on sample data, we can estimate or learn the probability mass function then the discrete version of the characteristic function is the discrete-time Fourier transform of the probability mass function. A visualization of a characteristic function is given below.
 
