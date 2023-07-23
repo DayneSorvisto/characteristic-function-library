@@ -1,64 +1,24 @@
-# Algebraic Data Analysis Library 
+# Practical Data Analysis with Characteristic Functions
 
-What would a data analysis library based on polynomials look like?
+This library is an implementation of a data science paper I wrote on using characteristic functions for data analysis. [Characteristic functions](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) 
 
-The following library contains experimental code, methods and techniques for representing data as polynomials. 
+In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information). If a random variable has a probability density function then the characteristic function is the Fourier transform of the probability density function. For a real world application based on sample data, we can estimate or learn the probability mass function then the discrete version of the characteristic function is the discrete-time Fourier transform of the probability mass function. A visualization of a characteristic function is given below.
 
-There are many ways to do this including polynomial regression, graph polynomials, characteristic functions and more. Polynomial operations also have interesting interpretations such as convolution which lends itself to many different types of analyses. 
+![image description](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sinc_simple.svg/280px-Sinc_simple.svg.png)
 
-## Pragmatic Use Cases of of this Library
+## Use in Data Analysis 
 
-Visualizing Relationships: By representing a probability distribution as a graph, you can visualize the relationships or dependencies between different events or variables. The edges between vertices can indicate the existence of potential dependencies or interactions.
-
-Graph Analytics: Once the probability distribution is converted into a graph, you can apply various graph analytics techniques to gain insights into the distribution. For example, you can calculate centrality measures to identify the most influential events, detect communities or clusters of related events, or analyze the overall connectivity and structure of the distribution. You can check if 2 polynomials are equal (in coefficients) to check graph isomorphism.
-
-Simulation and Sampling: The graph representation of a probability distribution can be utilized in simulation or sampling tasks. You can perform random walks or simulations on the graph to generate samples that follow the underlying probability distribution. This can be useful for generating synthetic data or performing Monte Carlo simulations.
-
-Identifying Key Events: The graph structure can help identify key events or variables within the probability distribution. Nodes with high degrees or high centrality values may represent crucial events that have a significant impact on the overall distribution.
+Characteristic functions can be used as part of procedures for fitting probability distributions to samples of data. Cases where this provides a practicable option compared to other possibilities include fitting the stable distribution since closed form expressions for the density are not available which makes implementation of maximum likelihood estimation difficult. Estimation procedures are available which match the theoretical characteristic function to the empirical characteristic function, calculated from the data. Paulson et al. (1975)[19] and Heathcote (1977)[20] provide some theoretical background for such an estimation procedure. In addition, Yu (2004)[21] describes applications of empirical characteristic functions to fit time series models where likelihood procedures are impractical. Empirical characteristic functions have also been used by Ansari et al. (2020)[22] and Li et al. (2020)[23] for training generative adversarial networks.
 
 
-Statistical Analysis: Characteristic functions play a crucial role in statistics, specifically in probability theory and distribution analysis. The characteristic function of a probability distribution uniquely defines the distribution, allowing us to calculate moments, derive limit theorems, and estimate parameters. It is used in the proof of the Central Limit Theorem and this library has as discrete version that will work on real-world data. 
 
-Spectral and Time Series Analysis: Characteristic functions and the DTFT find applications in time series analysis, where the goal is to model and forecast data that evolves over time. You can use DTFT to compute characteristic function of a random variable or probability distribution represented as an array of numbers or arbitrary tensor.
 
-Data Compression and Anomaly Detection (filtering): The DTFT is utilized in data compression techniques such as Fourier-based compression algorithms. 
+then the characteristic function is the Fourier transform of the probability density function. Thus it provides an alternative route to analytical results compared with working directly with probability density functions or cumulative distribution functions. There are particularly simple results for the characteristic functions of distributions defined by the weighted sums of random variables.
 
-The following functioality is included with the library:
+We define a discrete analogue of the characteristic function for discrete random variable and develop numerical procedures for computing the discrete characteristic function for several well-known discrete random variables. We rigorously define what is meant by the Fourier transform of a probability mass function and also show how to reverse the process to recover the probability mass function of a discrete random variable, given a procedure for computing the characteristic function. Unlike previous work on the subject, our approach is novel in that we are not computing closed-form solutions of a continuous random variable but are focused on applying the methods to real-world data sets.
 
-#  Graph polynomials
 
-Features: 
-- Computing discrete probability distributions to weighted graphs
-- Computing graph polynomials from weighted graphs
-- Computing adjacecy list reprensetation of graph into graph polynomials
 
-# Computing Characteristic Functions (based on Discrete-Time Fourier transforms:
-
-## Convolution of probability distributions using Polynomials
-
-Features:
-
-- Computing the characteristic function for a discrete probability distribution (returns function of a complex variable that can be evaluated at different points in domain for exaomple a complex polynomial)
-- Reverse process to compute original probability distribution from a characteristic function 
-- Functions for estimating probability distribution from some array of data
-- Neural networks with Fourier Transform layers for generalizing to arbitrary tensor data
-
-## Introduction 
-
-Convolution and Fourier transforms are mathematically connected through the Convolution Theorem, which states that convolution in the time domain is equivalent to multiplication in the frequency domain. This connection is a fundamental property of Fourier transforms and provides a powerful tool for analyzing signals and systems.
-It can also be applied to probability distributons not just signals. In fact the characteristic function of a probability distribution (implemented in this library as a discrete-time Fourier transform) is widely used in mathematical statistics (such as proof of the central limit theorem).  
-
-What would a data analysis library based on convolution look like? This library is a proof of concept based around explicit convolution of data stored as tensors without need for Convolutional Neural Networks (eventually I will add code for Fourier transform layers and graph polynomials as part of this library and symbolic support for Einsums for general tensor operations).
-
-## Technical Motivation and Intuition 
-
-What happens when you represent a probability distribution as a polynomial? It turns out, there's several interesting ways to do this and polynomial multiplication has a natural interpetation as convolution. This gives rise to a kind of "functional" data analysis workflow that can be generalized to data represented as arbitrary tensors.
-
-The abstraction that makes it all work is a special flavour of Fourier transform called the discrete-time Fourier transform (with some special treatment for probability) which plays well under convolution operation and can be applied to any kind of tensor data (array, matrix or more general tensor). 
-
-There are other ways to represent data as polynomials such as graph polynomials (after encoding your probability distribution as a graph).
-
-Through this Fourier transform, you can represent discrete probability distributions as polynomials, multiply them and interpet the result as a convolution or some other mathematical operation and perform symbolic data analysis.
 
 # Contributing
 
@@ -96,21 +56,20 @@ from algebraic_data_analysis import char, compute_char, proba
 
 # Set random seed for reproducibility and probability of Heads and Tails for a coin toss experiment.
 # Note: You can substitute coin toss experiment for any random process with parameters of your choice.
-sigma = 1
 pr_heads = 0.4
 pr_tails = 0.6
 
 random.seed(123)
 
-# Generate a training dataset of size N (custom data generation method)
+# Generate a training dataset of size N (custom data generation method). This can be any tensor.
 X_train = np.array(...)  # Replace with your custom data generation code
 
 # Estimate probability mass function using appropriate methods
 # For example, kernel density estimation or any other technique
 
-char = compute_char(X_train)
+char = char.fit(X_train)
 
-# Reverse the process with the inverse transform. For example, estimate probability of events using discrete characteristic function
+# This process is reversible, we can recover the original distribution. Reverse the process with the inverse transform.
 # This proves the process worked as expected 
 p, q = [proba(x, char, 2) for x in range(2)]
 
@@ -120,6 +79,10 @@ print(f"The probability of event 1 is {round(q, 2)}")
 ```
 
 In this example, the random seed is set for reproducibility, and parameters of a random process are defined (in this case coin toss experiment), and training data size (N) are defined. A training dataset X_train is generated using an appropriate method for custom data generation. The probability mass function of the data is estimated using methods such as kernel density estimation. The compute_char function is then used to compute the characteristic function of the discrete distribution based on the training dataset. The proba function is employed to estimate the probabilities of specific events, by passing the event index, the computed characteristic function, and the total number of possible outcomes. The estimated probabilities are printed or further analyzed as needed.
+
+## Additional functionality
+
+I've also added some additional functions for working with convolutions and defining graph polynomials that you might find useful. Polynomial multiplicaiton corresponds to convolution. 
 
 ## Example Working with Graph Polynomials 
 
@@ -136,6 +99,6 @@ print(polynomial)
 ```
 ## Philosophy of Algebraic Data Analysis
 
-The Fourier transform provides many equivalences between different areas and has unique applications to data analysis. Currently, the starting point involves estimating a discrete probability distribution from the data and representing it using polynomials. For instance, multiplying polynomials corresponds to the convolution of probability distributions. Other algebraic structure used include graph polynomials and the characteristic function, which utilizes the discrete-time Fourier transform to enable data analysis with complex numbers. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions.
+The Fourier transform provides many equivalences between different areas and has unique applications to data analysis. By leveraging basic algebraic operations, such as convolutions, Fourier transforms, and smoothing operations, powerful and elegant data analysis and inference tasks can be performed on discrete probability distributions by using characteristic functions.
 
 
