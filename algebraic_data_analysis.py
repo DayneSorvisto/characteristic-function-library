@@ -79,7 +79,7 @@ def estimate_pmf(X_train):
  return estimate
 
 
-def compute_char(vector):
+def fit(vector):
   """
   This returns the characteristic
   function of a pmf represented
@@ -96,7 +96,7 @@ def compute_char(vector):
       return np.dot(phi, pmf[:l])
   return char
 
-def proba(x, char, N):
+def reverse(x, char, N):
  """
  x (float): value of random variable rv in range 0, 1,2, ... N-1
  char (func): estimation of characteristic function  for random variable
