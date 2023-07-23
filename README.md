@@ -1,8 +1,12 @@
 # Practical Data Analysis with Characteristic Functions
 
-This library is an implementation of a data science paper on using characteristic functions for data analysis. [Characteristic functions](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) 
+This library is an implementation of a data science paper on using characteristic functions for data analysis. If you're not familiar with the [Characteristic functions](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) you can read about it before using the library.
 
-In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information). They are used in many proofs like the proof of the central limit theorem but not widely used in practical data analysis. Fortunately Python supports complex numbers natively which makes implementation straightforward. 
+In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information) but they have many interesting properties that are useful in data analysis instead of working with probability distributions directly. Although they are used in many mathematical applications like the proof of the Central Limit Theorem they are not yet widely used in practical data analysis. Fortunately Python supports complex numbers natively which makes implementation straightforward. You can use this library's fit function to estimate characteristic functions given an array of data values for example ['H', 'T', 'H', 'T',' 'H'] representing a coin toss (this is only an example, you can use any data you want).
+
+The fit function is actually a higher order function (it returns another function, representing the characteristic function). It's called fit because it has to first fit a probability distribution to your data before applying a Fourier transform to compute the characteristic function.
+
+Another function called reverse is able to reverse the process (it takes a characteristc function as input) and uses the inverse Fourier transform to recover a probability distribution. 
 
 ## Technical Details: Adapting characteristic functions to real world data and tensors
 
