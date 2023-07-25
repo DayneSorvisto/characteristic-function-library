@@ -2,7 +2,7 @@
 
 This library is an implementation of my paper using characteristic functions for practical data analysis. If you're not familiar with the [Characteristic function](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) you can read about it before using the library.
 
-Please star this repository or contribute examples. 
+Please suggest improvements, contribute examples or star the repository.
 
 ## Basis of the repository
 
