@@ -2,15 +2,17 @@
 
 This library is an implementation of my paper using characteristic functions for practical data analysis. If you're not familiar with the [Characteristic function](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) you can read about it before using the library.
 
+Please star this repository or contribute examples. 
+
+## Basis of the repository
+
 In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information) but they have many interesting properties that are useful in data analysis instead of working with probability distributions directly. Although they are used in many mathematical applications like the proof of the Central Limit Theorem they are not yet widely used in practical data analysis. Fortunately Python supports complex numbers natively which makes implementation straightforward. You can use this library's fit function to estimate characteristic functions given an array of data values for example ['H', 'T', 'H', 'T',' 'H'] representing a coin toss experiment (this is only an example, you can encode your data any way you want as long as it's a tensor).
 
 The fit function is actually a higher order function (it returns another function, representing the characteristic function). It's called fit because it has to first fit a probability distribution to your data before applying a Fourier transform to compute the characteristic function. The exact calculation requires some data preprocessing to adapt Fourier transforms to probability distributions that is outlined in several technical papers. 
 
 The library includes another function called reverse that is able to reverse the process (it takes a characteristc function as input) and uses the inverse Fourier transform to recover a probability distribution. 
 
-## Technical Details: Adapting characteristic functions to real world data and tensors
-
-If a random variable has a probability density function then the characteristic function is the Fourier transform of the probability density function. For a real world application based on sample data, we can estimate or learn the probability mass function then the discrete version of the characteristic function is the discrete-time Fourier transform of the probability mass function. A visualization of a characteristic function is given below.
+If a random variable has a probability density function then the characteristic function is the Fourier transform of the probability density function. For a real world application based on sample data, we can estimate or learn the probability mass function then the discrete version of the characteristic function is the discrete-time Fourier transform of the probability mass function. A visualization of a characteristic function (the real component) is given below.
 
 ![image description](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sinc_simple.svg/280px-Sinc_simple.svg.png)
 
