@@ -26,7 +26,7 @@ Since the characteristic function is the Fourier transform of the probability de
 
 # Contributing
 
-This code is experimental. 
+This code is experimental but is a library for a functional (lisp-like) syntax for data analysis using pure functions. 
 
 Despite the wide-spread use of Fourier transforms in signal processing and time series (especially seasonal data or data that is periodic in nature), applying the discrete-time Fourier transform to discrete probability distributions to do data analysis is a less well-known technique (the continuous version is widely applied in mathematicla statistics).
 
