@@ -1,6 +1,6 @@
 # Practical Data Analysis with Characteristic Functions
 
-This library is an implementation of a data science paper on using characteristic functions for data analysis. If you're not familiar with the [Characteristic functions](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) you can read about it before using the library.
+This library is an implementation of my paper using characteristic functions for practical data analysis. If you're not familiar with the [Characteristic function](https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)) you can read about it before using the library.
 
 In probability theory and statistics, the characteristic function of a random variable completely defines its probability distribution (they contain the same information) but they have many interesting properties that are useful in data analysis instead of working with probability distributions directly. Although they are used in many mathematical applications like the proof of the Central Limit Theorem they are not yet widely used in practical data analysis. Fortunately Python supports complex numbers natively which makes implementation straightforward. You can use this library's fit function to estimate characteristic functions given an array of data values for example ['H', 'T', 'H', 'T',' 'H'] representing a coin toss experiment (this is only an example, you can encode your data any way you want as long as it's a tensor).
 
